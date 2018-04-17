@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+
+	{{ partial "header.html" . }}
+	<body class="landing">
+
+	{{ "<!-- Wrapper -->" | safeHTML }}
+		<div id="page-wrapper">
+
+			{{ partial "nav.html" . }}
+
+			{{ partial "banner.html" . }}
+
+		{{ "<!-- Main -->" | safeHTML }}
+			{{ if .IsHome }}
+				{{ partial "section1.html" . }}
+				{{ partial "section2.html" . }}
+				{{ partial "section3.html" . }}
+				{{ partial "section4.html" . }}
+				{{ partial "section5.html" . }}
+				{{ partial "section6.html" . }}
+			{{ end }}
+
+		{{ "<!-- Contact -->" | safeHTML}}
+			{{ if .Site.Params.Contact.enable }}
+				{{ partial "contact.html" . }}
+			{{ end }}
+
+		{{ "<!-- Footer -->" | safeHTML}}
+			{{ partial "footer.html" . }}
+
+		</div>
+
+	{{ "<!-- Scripts -->" | safeHTML}}
+		{{ partial "js.html" . }}
+
+	</body>
+</html>

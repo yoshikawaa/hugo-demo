@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+
+    {{ partial "header.html" . }}
+    <body>
+
+    {{ "<!-- Wrapper -->" | safeHTML }}
+        <div id="page-wrapper">
+
+            {{ partial "nav.html" . }}
+
+        {{ "<!-- Main -->" | safeHTML }}
+            <div id="main" class="wrapper style1">
+                <div class="container">
+                    <header class="major">
+                        <h2>{{ .Title}}</h2>
+                        <p>Published at {{ .PublishDate.Format "January 4, 2006" }}</p>
+                    </header>
+                    <section id="content">
+                        {{ if .Params.image }}
+                            <div class="image fit">
+                                <img src="{{ .Params.image | absURL }}" alt="" />
+                            </div>
+                        {{ end }}
+                        {{ .Content }}    
+                    </section>
+                </div>
+            </div>
+            
+        {{ "<!-- Footer -->" | safeHTML}}
+            {{ partial "footer.html" . }}
+    </div>
+
+    {{ "<!-- Scripts -->" | safeHTML}}
+        {{ partial "js.html" . }}
+
+    </body>
+</html>
