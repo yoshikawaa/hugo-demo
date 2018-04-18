@@ -1,10 +1,10 @@
 ---
-title: "No SideBar"
+title: "Left Sidebar"
 date: 2018-04-17T01:51:07+09:00
 draft: false
-layout: intro
 subtitle: Ipsum dolor feugiat aliquam tempus sed magna lorem consequat accumsan
-image: /images/pic07.jpg
+image: /images/pic05.jpg
+layout: left-sidebar
 ---
 
 ### Dolore Amet Consequat

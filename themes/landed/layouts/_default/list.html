@@ -13,16 +13,22 @@
             <div id="main" class="wrapper style1">
                 <div class="container">
                     <header class="major">
-                        <h2>{{ .Title}}</h2>
-                        <p>Published at {{ .PublishDate.Format "January 4, 2006" }}</p>
+                        <h2>{{ .Title }}</h2>
                     </header>
                     <section id="content">
-                        {{ if .Params.image }}
-                            <div class="image fit">
-                                <img src="{{ .Params.image | absURL }}" alt="" />
+                        <div class="box alt">
+                            <div class="row uniform">
+                                {{ range .Data.Pages }}
+                                <section class="4u 6u(medium) 12u$(xsmall)">
+                                    <h3>
+                                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                                    </h3>
+                                    <p>Published at {{ .PublishDate.Format "January 4, 2006" }}</p>
+                                    <p>{{ .Summary }}</p>
+                                </section>
+                                {{ end }}
                             </div>
-                        {{ end }}
-                        {{ .Content }}    
+                        </div>
                     </section>
                 </div>
             </div>

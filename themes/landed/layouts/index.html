@@ -8,7 +8,6 @@
 		<div id="page-wrapper">
 
 			{{ partial "nav.html" . }}
-
 			{{ partial "banner.html" . }}
 
 		{{ "<!-- Main -->" | safeHTML }}
@@ -18,12 +17,7 @@
 				{{ partial "section3.html" . }}
 				{{ partial "section4.html" . }}
 				{{ partial "section5.html" . }}
-				{{ partial "section6.html" . }}
-			{{ end }}
-
-		{{ "<!-- Contact -->" | safeHTML}}
-			{{ if .Site.Params.Contact.enable }}
-				{{ partial "contact.html" . }}
+				{{ partial "entries.html" . }}
 			{{ end }}
 
 		{{ "<!-- Footer -->" | safeHTML}}
