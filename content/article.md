@@ -1,10 +1,9 @@
 ---
-title: "Right Sidebar"
+title: "Article"
 date: 2018-04-17T01:51:07+09:00
 draft: false
 subtitle: Ipsum dolor feugiat aliquam tempus sed magna lorem consequat accumsan
-image: /images/pic06.jpg
-layout: right-sidebar
+image: /images/pic07.jpg
 ---
 
 ### Dolore Amet Consequat

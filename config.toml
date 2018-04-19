@@ -5,3 +5,4 @@ theme = "landed"
 
 [Params]
 Error404 = { text = "error" }
+sidebar = "none"
