@@ -1,5 +1,5 @@
 {{ "<!-- Entries -->" | safeHTML}}
-<section id="section6" class="wrapper style2 special fade">
+<section id="Entries" class="wrapper style2 special fade">
     <div class="container">
         <header>
             <h2>Recent Entries</h2>
@@ -8,6 +8,9 @@
             <div class="row uniform">
                 {{ range (.Paginator 10).Pages }}
                     <section class="4u 6u(medium) 12u$(xsmall)">
+                         {{ if isset .Params "image" }}
+                        <a href={{ .Permalink }} class="image fit"><img src={{ .Params.image | absURL }} alt="" /></a>
+                        {{ end }}
                         <h3>{{ .Title }}</h3>
                         <p>Published at {{ .PublishDate.Format "January 4, 2006" }}</p>
                         <p>{{ .Summary }}</p>
