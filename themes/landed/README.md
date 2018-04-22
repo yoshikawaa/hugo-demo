@@ -1,17 +1,17 @@
-# Forty Theme
+# Landed Theme
 
-Forty theme is a multi page website built around a grid of image tiles that transition into its content pages. It is a ported theme built by [HTML5 UP](https://html5up.net/). This theme contains many styled elements and features a contact form. Built for blogs, businesses, or freelancers.
+Landed theme is a multi page website built around a grid of image tiles that transition into its content pages. It is a ported theme built by [HTML5 UP](https://html5up.net/). This theme contains many styled elements and features a contact form. Built for blogs, businesses, or freelancers.
 
-![Forty Screenshot](https://github.com/MarcusVirg/forty/blob/master/images/screenshot.png?raw=true)
+![Landed Screenshot](/yoshikawaa/landed/blob/master/images/screenshot.png?raw=true)
 
-For a demo go to [Forty Demo](https://html5up.net/uploads/demos/forty/).
+For a demo go to [Landed Demo](https://html5up.net/uploads/demos/landed/).
 
 ## Installation
 
 Create a new Hugo Site and inside the site folder run the following commands:
 
     $ cd themes
-    $ git clone https://github.com/MarcusVirg/forty
+    $ git clone https://github.com/yoshikawaa/landed
 
 To learn how to create a Hugo Site read the [official guide](//gohugo.io/overview/installing/) of Hugo.
 
@@ -20,7 +20,7 @@ To learn how to create a Hugo Site read the [official guide](//gohugo.io/overvie
 If you are using Netlify to host your hugo site, you will want to add it as a submodule instead of cloning:
 
     $ cd themes
-    $ git submodule add https://github.com/MarcusVirg/forty
+    $ git submodule add https://github.com/yoshikawaa/landed
 
 This is because Netlify uses the hugo build command when autopublish is enabled and will produce an error if the theme is not a submodule. See the [Hugo Guide](https://gohugo.io/hosting-and-deployment/hosting-on-netlify/#use-hugo-themes-with-netlify) for more information.
 
@@ -32,7 +32,7 @@ After cloning Forty or adding it as a submodule, there are a few other things yo
 
 ### Config File
 
-There is an [`exampleSite`](//github.com/MarcusVirg/forty/tree/master/exampleSite) folder for this theme. Copy the file called [`config.toml`](//github.com/MarcusVirg/forty/blob/master/exampleSite/config.toml) to your websites root directory.
+There is an [`exampleSite`](/yoshikawaa/landed/tree/master/exampleSite) folder for this theme. Copy the file called [`config.toml`](/yoshikawaa/landed/blob/master/exampleSite/config.toml) to your websites root directory.
 Here you can customize some of the text and content on the website.
 
 ### Change background
@@ -51,7 +51,7 @@ Replace `myBlog.md` with your own file name. You can also just copy the markdown
 ### Contact form
 
 This page is static so [formspree.io](https://formspree.io/) is used to forward the message to your email. Visitors can send you up to 1,000 emails per month for free.
-You can set your email in the [`config.toml`](//github.com/MarcusVirg/forty/blob/master/exampleSite/config.toml) file. You then have to confirm your email with formspree and will begin recieving messages after you do so. I recommend only having the contact form on one page, most likely the index.html, because you have to confirm for every URL the contact form is on.
+You can set your email in the [`config.toml`](/yoshikawaa/landed/blob/master/exampleSite/config.toml) file. You then have to confirm your email with formspree and will begin recieving messages after you do so. I recommend only having the contact form on one page, most likely the index.html, because you have to confirm for every URL the contact form is on.
 
 ### Preview
 
@@ -70,7 +70,7 @@ Find a bug or want a new feature? Use the issue tracker or submit a pull request
 ## License
 
 This theme is released under the Creative Commons Attribution 3.0.
-For more information read the [License](//github.com/MarcusVirg/forty/blob/master/LICENSE.md).
+For more information read the [License](//github.com/yoshikawaa/landed/blob/master/LICENSE.md).
 
 ## Acknowledgements
 

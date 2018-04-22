@@ -1,0 +1,35 @@
+{{ "<!-- Entry -->" | safeHTML }}
+{{ if .Site.Params.entry }}
+<section id="four" class="wrapper style1 special fade-up">
+    <div class="container">
+        <header class="major">
+            <h2>{{ .Site.Params.entry.title }}</h2>
+            <p>{{ .Site.Params.entry.subtitle }}</p>
+        </header>
+        <div class="box alt">
+            <div class="row uniform">
+                {{ range $index, $element := (.Paginator .Site.Params.entry.count).Pages }}
+                <section class="4u 6u{{ if not (modBool $index 2) }}${{ end }}(medium) 12u$(xsmall)">
+                    {{ if .Params.image }}
+                    <a href="{{ .Permalink }}" class="image fit"><img src="{{ .Params.image | absURL }}" alt="" /></a>
+                    {{ end }}
+                    <h3>{{ .Title }}</h3>
+                    <p>at {{ .Date.Format "January 4, 2006" }}</p>
+                    <p>{{ .Summary }}</p>
+                    <footer>
+                        <ul class="actions">
+                            <li><a href="{{ .Permalink }}" class="button">Read Mode</a></li>
+                        </ul>
+                    </footer>
+                </section>
+                {{ end }}
+            </div>
+        </div>
+        <footer class="major">
+        <ul class="actions">
+            <li><a href="#" class="button">Magna sed feugiat</a></li>
+        </ul>
+        </footer>
+    </div>
+</section>
+{{ end }}

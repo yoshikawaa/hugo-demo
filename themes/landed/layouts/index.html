@@ -4,27 +4,20 @@
 	{{ partial "header.html" . }}
 	<body class="landing">
 
-	{{ "<!-- Wrapper -->" | safeHTML }}
+		{{ "<!-- Wrapper -->" | safeHTML }}
 		<div id="page-wrapper">
-
 			{{ partial "nav.html" . }}
 			{{ partial "banner.html" . }}
 
-		{{ "<!-- Main -->" | safeHTML }}
-			{{ if .IsHome }}
-				{{ partial "section1.html" . }}
-				{{ partial "section2.html" . }}
-				{{ partial "section3.html" . }}
-				{{ partial "section4.html" . }}
-				{{ partial "section5.html" . }}
-			{{ end }}
+			{{ "<!-- Main -->" | safeHTML }}
+			{{ partial "spotlights.html" . }}
+			{{ partial "tile.html" . }}
+			{{ partial "entry.html" . }}
+			{{ partial "mailform.html" . }}
 
-		{{ "<!-- Footer -->" | safeHTML}}
 			{{ partial "footer.html" . }}
-
 		</div>
 
-	{{ "<!-- Scripts -->" | safeHTML}}
 		{{ partial "js.html" . }}
 
 	</body>

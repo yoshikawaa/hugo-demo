@@ -1,15 +1,14 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
 
     {{ partial "header.html" . }}
     <body>
 
-    {{ "<!-- Wrapper -->" | safeHTML }}
+        {{ "<!-- Wrapper -->" | safeHTML }}
         <div id="page-wrapper">
-
             {{ partial "nav.html" . }}
 
-        {{ "<!-- Main -->" | safeHTML }}
+            {{ "<!-- Main -->" | safeHTML }}
             <div id="main" class="wrapper style1">
                 <div class="container">
                     <header class="major">
@@ -40,11 +39,9 @@
                 </div>
             </div>
             
-        {{ "<!-- Footer -->" | safeHTML}}
             {{ partial "footer.html" . }}
-    </div>
+        </div>
 
-    {{ "<!-- Scripts -->" | safeHTML}}
         {{ partial "js.html" . }}
 
     </body>

@@ -4,5 +4,222 @@ title = "My New Hugo Site"
 theme = "landed"
 
 [Params]
-Error404 = { text = "error" }
-sidebar = "none"
+  # You can use Markdown syntax for urls [text](//url.to/source)
+  # To create multi-line text in strings use the """example Text""" format
+  #
+  # All icons using Fontawesome's icon font. Look at fontawesome.io/icons
+  # for more icons. The icons are represented by their corresponding
+  # CSS class.
+
+  # Provide your metadata here.
+  name = "Your name"
+  description = "Your description"
+
+  # Link custom assets relative to /static
+  custom_css = []
+  custom_js  = []
+  favicon    = "favicon.ico"
+
+  # Just a custom image variable, please define it in .md files for content.
+  image = ""
+
+  # 404 error customization
+  [Params.error404]
+    heading = "Page couldn't be found"
+    text = "Please visit [this page](/)"
+
+  # Navigation Section
+  [Params.navigation]
+    title = "Landed"
+    # Optional logo as brand stored in img/
+    # logo = "logo.png"
+
+    [[Params.navigation.links]]
+      name = "Home"
+      url = "/"
+    # Optional style as class attribute
+    # class = "button special"
+
+    [[Params.navigation.links]]
+      name = "Layouts"
+      url = "#"
+
+      [[Params.navigation.links.childs]]
+        name = "Article"
+        url = "article"
+
+      [[Params.navigation.links.childs]]
+        name = "Submenu"
+        url = "#"
+
+        [[Params.navigation.links.childs.childs]]
+          name = "Option 1"
+          url = "#"
+
+        [[Params.navigation.links.childs.childs]]
+          name = "Option 2"
+          url = "#"
+
+        [[Params.navigation.links.childs.childs]]
+          name = "Option 3"
+          url = "#"
+
+        [[Params.navigation.links.childs.childs]]
+          name = "Option 4"
+          url = "#"
+
+    [[Params.navigation.links]]
+      name = "Elements"
+      url = "elements"
+
+    [[Params.navigation.links]]
+      name = "Sign Up"
+      url = "#"
+      class = "button special"
+
+  # Banner section
+  [Params.banner]
+    title = "The future has landed"
+    subtitle = """And there are no hoverboards or flying cars.  
+                Just apps. Lots of mother flipping apps.
+                """
+    image = "/img/pic01.jpg"
+    next = "#one"
+
+  # Spotlight section
+  [[Params.spotlights]]
+    id = "one"
+    style = "bottom"
+    image = "/img/pic02.jpg"
+    title = "Odio faucibus ipsum integer consequat"
+    subtitle = "Nascetur eu nibh vestibulum amet gravida nascetur praesent"
+    text1 = """Feugiat accumsan lorem eu ac lorem amet sed accumsan donec.
+            Blandit orci porttitor semper. Arcu phasellus tortor enim mi
+            nisi praesent dolor adipiscing. Integer mi sed nascetur cep aliquet
+            augue varius tempus lobortis porttitor accumsan consequat
+            adipiscing lorem dolor."""
+    text2 = """Morbi enim nascetur et placerat lorem sed iaculis neque ante
+            adipiscing adipiscing metus massa. Blandit orci porttitor semper.
+            Arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer
+            mi sed nascetur cep aliquet augue varius tempus. Feugiat lorem
+            ipsum dolor nullam."""
+    next = "#two"
+
+  [[Params.spotlights]]
+    id = "two"
+    style = "right"
+    image = "/img/pic03.jpg"
+    title = "Interdum amet non magna accumsan"
+    subtitle = "Nunc commodo accumsan eget id nisi eu col volutpat magna"
+    text = """Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing.
+            Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem."""
+    next = "#three"
+
+    [[Params.spotlights.links]]
+      name = "Learn More"
+      url = "#"
+      style = "button"
+
+  [[Params.spotlights]]
+    id = "three"
+    style = "left"
+    image = "/img/pic04.jpg"
+    title = "Interdum felis blandit praesent sed augue"
+    subtitle = "Accumsan integer ultricies aliquam vel massa sapien phasellus"
+    text = """Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing.
+            Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem."""
+    next = "#four"
+
+    [[Params.spotlights.links]]
+      name = "Learn More"
+      url = "#"
+      style = "button"
+
+  [Params.tile]
+    id = "four"
+    title = "Accumsan sed tempus adipiscing blandit"
+    subtitle = "Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu consequat"
+
+    [[Params.tile.tiles]]
+      icon = "fa-area-chart"
+      title = "Ipsum sed commodo"
+      text = "Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor."
+
+    [[Params.tile.tiles]]
+      icon = "fa-comment"
+      title = "Eleifend lorem ornare"
+      text = "Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor."
+
+    [[Params.tile.tiles]]
+      icon = "fa-flask"
+      title = "Cubilia cep lobortis"
+      text = "Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor."
+
+    [[Params.tile.tiles]]
+      icon = "fa-paper-plane"
+      title = "Non semper interdum"
+      text = "Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor."
+
+    [[Params.tile.tiles]]
+      icon = "fa-file"
+      title = "Odio laoreet accumsan"
+      text = "Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor."
+
+    [[Params.tile.tiles]]
+      icon = "fa-lock"
+      title = "Massa arcu accumsan"
+      text = "Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor."
+
+    [[Params.tile.links]]
+      name = "Magna sed feugiat"
+      url = "#"
+      style = "button"
+
+#   [Params.entry]
+#     id = "four"
+#     title = "Accumsan sed tempus adipiscing blandit"
+#     subtitle = "Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu consequat"
+#     count = 6
+
+  [Params.mailform]
+    id = "five"
+    title = "Magna faucibus lorem diam"
+    subtitle = "Ante metus praesent faucibus ante integer id accumsan eleifend"
+    url = "#"
+    text = "Get Started"
+
+  # Footer section
+  [Params.footer]
+    enable = true
+    copyright = "Company Name"
+
+    # Uses font awesome icons
+    [[Params.footer.social]]
+      icon = "fa-twitter"
+      url= "https://www.twitter.com"
+      label = "Twitter"
+
+    [[Params.footer.social]]
+      icon = "fa-facebook"
+      url= "https://www.facebook.com"
+      label = "Facebook"
+
+    [[Params.footer.social]]
+      icon = "fa-instagram"
+      url= "https://www.instagram.com"
+      label = "Instagram"
+    
+    [[Params.footer.social]]
+      icon = "fa-github"
+      url= "https://www.github.com"
+      label = "GitHub"
+
+    [[Params.footer.social]]
+      icon = "fa-linkedin"
+      url= "https://www.linkedin.com"
+      label = "LinkedIn"
+
+    [[Params.footer.quicklinks]]
+      text = "Design: "
+      url= "https://www.html5up.net"
+      label = "HTML5 UP"

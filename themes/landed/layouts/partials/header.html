@@ -5,18 +5,20 @@
 	{{ with .Site.Params.name }}<meta name="author" content="{{ . }}">{{ end }}
 	{{ .Hugo.Generator }}
 	<title>{{ .Title }}{{ if not .IsHome }} &middot; {{ .Site.Title }}{{ end }}</title>
+	<base href="{{ .Site.BaseURL }}">
+
 	{{ "<!-- Stylesheets -->" | safeHTML }}
-	<!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
-	<link rel="stylesheet" href="{{ "css/main.css" | absURL}}"/>
-	<!--[if lte IE 9]><link rel="stylesheet" href="{{ "css/ie9.css" }}"/><![endif]-->
-	<!--[if lte IE 8]><link rel="stylesheet" href="{{ "css/ie8.css" }}"/><![endif]-->
+	{{ "<!--[if lte IE 8]>" | safeHTML }}<script src="{{ "js/ie/html5shiv.js" }}"></script>{{ "<![endif]-->" | safeHTML }}
+	<link rel="stylesheet" href="{{ "css/main.css" }}"/>
+	{{ "<!--[if lte IE 9]>" | safeHTML }}<script src="{{ "css/ie9.css" }}"></script>{{ "<![endif]-->" | safeHTML }}
+	{{ "<!--[if lte IE 8]>" | safeHTML }}<script src="{{ "css/ie8.css" }}"></script>{{ "<![endif]-->" | safeHTML }}
 
 	{{ range .Site.Params.custom_css }}
-		<link rel="stylesheet" href="{{ . | absURL }}">
+	<link rel="stylesheet" href="{{ . }}">
 	{{ end }}
 
 	{{ with .Site.Params.favicon }}
-	<link rel="shortcut icon" type="image/x-icon" href="{{ . | absURL }}">
-	<link rel="icon" type="image/x-icon" href="{{ . | absURL }}">
+	<link rel="shortcut icon" type="image/x-icon" href="{{ . }}">
+	<link rel="icon" type="image/x-icon" href="{{ . }}">
 	{{ end }}
 </head>

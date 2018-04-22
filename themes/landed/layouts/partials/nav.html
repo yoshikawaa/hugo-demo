@@ -1,26 +1,28 @@
 {{ "<!-- Header -->" | safeHTML }}
+{{ with .Site.Params.navigation }}
 <header id="header">
-    <h1 id="logo"><a href={{ .Site.BaseURL }}>Landed</a></h1>
+    <h1 id="logo"><a href="{{ .Site.BaseURL }}">{{ .title }}</a></h1>
     <nav id="nav">
         <ul>
-            <li><a href={{ .Site.BaseURL }}>Home</a></li>
-            <li>
-                <a href="#">Layouts</a>
+            {{ range .links }}
+            <li><a href="{{ .url }}" {{ if .class }}class="{{ .class }}"{{ end }}>{{ .name }}</a>
+                {{ if .childs }}
                 <ul>
-                    <li><a href={{ "article" | absURL }}>Article</a></li>
-                    <li>
-                        <a href="#">Submenu</a>
+                    {{ range .childs }}
+                    <li><a href="{{ .url }}" {{ if .class }}class="{{ .class }}"{{ end }}>{{ .name }}</a>
+                        {{ if .childs }}
                         <ul>
-                            <li><a href="#">Option 1</a></li>
-                            <li><a href="#">Option 2</a></li>
-                            <li><a href="#">Option 3</a></li>
-                            <li><a href="#">Option 4</a></li>
+                            {{ range .childs }}
+                            <li><a href="{{ .url }}" {{ if .class }}class="{{ .class }}"{{ end }}>{{ .name }}</a>
+                            {{ end }}
                         </ul>
-                    </li>
+                        {{ end }}
+                    {{ end }}
                 </ul>
+                {{ end }}
             </li>
-            <li><a href={{ "elements" | absURL }}>Elements</a></li>
-            <li><a href="#" class="button special">Sign Up</a></li>
+            {{ end }}
         </ul>
     </nav>
 </header>
+{{ end }}
