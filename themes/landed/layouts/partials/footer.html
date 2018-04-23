@@ -1,14 +1,14 @@
 {{ "<!-- Footer -->" | safeHTML }}
-{{ if .Site.Params.footer }}
+{{ with .Site.Params.footer }}
 <footer id="footer">
     <ul class="icons">
-        {{ range .Site.Params.footer.social }}
+        {{ range .social }}
         <li><a href="{{ .url }}" class="icon alt {{ .icon }}"><span class="label">{{ .label }}</span></a></li>
         {{ end }}
     </ul>
     <ul class="copyright">
-        <li>&copy; {{ .Site.Params.name }}. All rights reserved.</li>
-        {{ range .Site.Params.footer.quicklinks }}
+        <li>&copy; <a href="http://github.com/yoshikawaa/landed">yoshikawaa</a> All rights reserved.</li>
+        {{ range .quicklinks }}
         <li>{{ .text }}<a href="{{ .url }}">{{ .label }}</a></li>
         {{ end }}
     </ul>

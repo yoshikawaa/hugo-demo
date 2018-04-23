@@ -11,8 +11,11 @@
 
 			{{ "<!-- Main -->" | safeHTML }}
 			{{ partial "spotlights.html" . }}
-			{{ partial "tile.html" . }}
-			{{ partial "entry.html" . }}
+			{{ if eq .Site.Params.box.style "tile" }}
+				{{ partial "tile.html" . }}
+			{{ else if eq .Site.Params.box.style "entry" }}
+				{{ partial "entry.html" . }}
+			{{ end }}
 			{{ partial "mailform.html" . }}
 
 			{{ partial "footer.html" . }}

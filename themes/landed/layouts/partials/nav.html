@@ -4,15 +4,15 @@
     <h1 id="logo"><a href="{{ .Site.BaseURL }}">{{ .title }}</a></h1>
     <nav id="nav">
         <ul>
-            {{ range .links }}
+            {{ range .link }}
             <li><a href="{{ .url }}" {{ if .class }}class="{{ .class }}"{{ end }}>{{ .name }}</a>
-                {{ if .childs }}
+                {{ if .child }}
                 <ul>
-                    {{ range .childs }}
+                    {{ range .child }}
                     <li><a href="{{ .url }}" {{ if .class }}class="{{ .class }}"{{ end }}>{{ .name }}</a>
-                        {{ if .childs }}
+                        {{ if .child }}
                         <ul>
-                            {{ range .childs }}
+                            {{ range .child }}
                             <li><a href="{{ .url }}" {{ if .class }}class="{{ .class }}"{{ end }}>{{ .name }}</a>
                             {{ end }}
                         </ul>

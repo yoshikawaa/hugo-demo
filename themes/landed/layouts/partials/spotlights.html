@@ -1,5 +1,5 @@
 {{ "<!-- Spotlights -->" | safeHTML }}
-{{ range $index, $element := .Site.Params.spotlights }}
+{{ range $index, $element := .Site.Params.spotlight }}
 {{ if eq .style "bottom" }}
 <section id="{{ .id }}" class="spotlight style{{ add $index 1 }} bottom">
     <span class="image fit main"><img src="{{ .image }}" alt="" /></span>
@@ -9,14 +9,14 @@
                 <div class="4u 12u$(medium)">
                     <header>
                         <h2>{{ .title }}</h2>
-                        <p>{{ .subtitle }}</p>
+                        <p>{{ .description }}</p>
                     </header>
                 </div>
                 <div class="4u 12u$(medium)">
-                    <p>{{ .text1 | markdownify }}</p>
+                    <p>{{ .content1 | markdownify }}</p>
                 </div>
                 <div class="4u$ 12u$(medium)">
-                    <p>{{ .text2 | markdownify }}</p>
+                    <p>{{ .content2 | markdownify }}</p>
                 </div>
             </div>
         </div>
@@ -31,11 +31,11 @@
     <div class="content">
         <header>
             <h2>{{ .title }}</h2>
-            <p>{{ .subtitle }}</p>
+            <p>{{ .description }}</p>
         </header>
-        <p>{{ .text }}</p>
+        <p>{{ .content }}</p>
         <ul class="actions">
-            {{ range .links }}
+            {{ range .link }}
             <li><a href="{{ .url }}" class="{{ .style }}">{{ .name }}</a></li>
             {{ end }}
         </ul>

@@ -1,6 +1,6 @@
 ---
 title: "Article"
-subtitle: Ipsum dolor feugiat aliquam tempus sed magna lorem consequat accumsan
+description: Ipsum dolor feugiat aliquam tempus sed magna lorem consequat accumsan
 image: /img/pic07.jpg
 date: 2018-04-17T01:51:07+09:00
 draft: false
