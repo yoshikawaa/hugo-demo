@@ -33,7 +33,7 @@ theme = "landed"
 
   # Navigation Section
   [Params.navigation]
-    title = "Landed"
+    title = "どうぶつ担当"
     # Optional logo as brand stored in img/
     # logo = "logo.png"
 
@@ -82,40 +82,31 @@ theme = "landed"
 
   # Banner section
   [Params.banner]
-    title = "The future has landed"
-    description = """And there are no hoverboards or flying cars.  
-                Just apps. Lots of mother flipping apps.
+    title = "どうぶつ担当"
+    description = """ネッコが好きだ！  
+                イッヌが好きだ！
                 """
-    image = "/img/pic01.jpg"
+    image = "/img/pic11.jpg"
     next = "#one"
 
   # Spotlight section
   [[Params.spotlight]]
     id = "one"
     style = "bottom"
-    image = "/img/pic02.jpg"
-    title = "Odio faucibus ipsum integer consequat"
-    description = "Nascetur eu nibh vestibulum amet gravida nascetur praesent"
-    content1 = """Feugiat accumsan lorem eu ac lorem amet sed accumsan donec.
-            Blandit orci porttitor semper. Arcu phasellus tortor enim mi
-            nisi praesent dolor adipiscing. Integer mi sed nascetur cep aliquet
-            augue varius tempus lobortis porttitor accumsan consequat
-            adipiscing lorem dolor."""
-    content2 = """Morbi enim nascetur et placerat lorem sed iaculis neque ante
-            adipiscing adipiscing metus massa. Blandit orci porttitor semper.
-            Arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer
-            mi sed nascetur cep aliquet augue varius tempus. Feugiat lorem
-            ipsum dolor nullam."""
+    image = "/img/pic12.jpg"
+    title = "ノルウェージャンフォレストキャット担当"
+    description = "かわいい！"
+    content1 = """ノルウェーからやってきたネッコ！"""
+    content2 = """さむさにつよい！"""
     next = "#two"
 
   [[Params.spotlight]]
     id = "two"
     style = "right"
-    image = "/img/pic03.jpg"
-    title = "Interdum amet non magna accumsan"
-    description = "Nunc commodo accumsan eget id nisi eu col volutpat magna"
-    content = """Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing.
-            Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem."""
+    image = "/img/pic13.jpg"
+    title = "黒シッバ担当"
+    description = "かわいい！"
+    content = """くろくてまるい！"""
     next = "#three"
 
     [[Params.spotlight.link]]
@@ -126,11 +117,10 @@ theme = "landed"
   [[Params.spotlight]]
     id = "three"
     style = "left"
-    image = "/img/pic04.jpg"
-    title = "Interdum felis blandit praesent sed augue"
-    description = "Accumsan integer ultricies aliquam vel massa sapien phasellus"
-    content = """Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing.
-            Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem."""
+    image = "/img/pic14.jpg"
+    title = "すーん担当"
+    description = "かわいい！"
+    content = """ねてるだけでかわいい！"""
     next = "#four"
 
     [[Params.spotlight.link]]
